@@ -12,7 +12,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 
 # --- Flask app setup ---
 app = Flask(__name__, static_folder='static')
-app.secret_key = os.environ.get('SECRET_KEY', 'change-this-in-production')
+app.secret_key = os.environ.get('SECRET_KEY')
 
 USERS_FILE = 'users.json'
 scans = {}  # Stores scan results keyed by scan_id
